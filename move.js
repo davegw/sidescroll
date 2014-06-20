@@ -26,6 +26,11 @@ $('html').keydown(function(e){
     //Right = Walk right
     player.slide(10);
   }
+  if (e.which === 32) {
+    $('.player').animate({top: "-=100px"}, function() {
+      $('.player').animate({top: "+=100px"});
+    });
+  }
   checkPosition();
 });
 
