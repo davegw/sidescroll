@@ -46,6 +46,21 @@ var makeThings = function(type, interval) {
 }
 makeThings('taxi');
 
+var collisionDetection = function() {
+  var $player = $('#player');
+  var playerLeft = $player.css('left')
+
+  var $taxis = $('.taxi');
+
+  $taxis.each(function(index){
+    if (this.css('left') = playerLeft || this.css('left') < playerLeft + 60) {
+      mergeTaxi(this);
+    }
+  })
+}
+
 var taxiMerge = function(){
 	this.hide();
 }
+
+setInterval(collisionDetection.bind(this), 50);
