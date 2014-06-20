@@ -10,6 +10,14 @@ var Slider = function(type, startX) {
 
 Slider.prototype.slide = function(pixels) {
 	this.x += pixels;
+	if (pixels < 0){
+		this.el.removeClass('right');
+		this.el.addClass('left');
+	}
+	if (pixels > 0){
+		this.el.removeClass('left');
+		this.el.addClass('right');
+	}
 	this.el.css('left', this.x + 'px');
 }
 
