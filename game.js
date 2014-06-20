@@ -4,7 +4,8 @@ var gameWidth = $(window).width();
 
 var Slider = function(type, startX) {
 	this.x = startX;
-	this.el = $('<div class="slider ' + type + '" style="top: 500px;"></div>');
+	this.type = type;
+	this.el = $('<div class="slider ' + this.type + '" style="top: 500px;"></div>');
 	this.render();
 }
 
@@ -19,6 +20,9 @@ Slider.prototype.slide = function(pixels) {
 		this.el.addClass('right');
 	}
 	this.el.css('left', this.x + 'px');
+	if (this.type === 'taxi' && this.x >= gameWidth) {
+		this.el.remove();
+	}
 }
 
 Slider.prototype.render = function() {
@@ -42,6 +46,6 @@ var makeThings = function(type, interval) {
 	setInterval(function() {
 		var taxi = new Slider(type, 0);
 		taxi.slideUntil(300, 10);
-	}, 6000);
+	}, Math.random()*12000);
 }
 makeThings('taxi');
