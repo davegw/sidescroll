@@ -45,3 +45,7 @@ var makeThings = function(type, interval) {
 	}, 6000);
 }
 makeThings('taxi');
+
+var taxiMerge = function(){
+	this.hide();
+}
