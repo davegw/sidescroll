@@ -11,12 +11,22 @@ body {
 	position: absolute;
 }
 
-#player {
+.player {
 	position: absolute;
 	margin: auto;
 	background-size: 100% 100%;
 	width: 60px;
 	height: 60px;
+	top: 65%;
+	left: 50%;
+}
+
+.taxi {
+	position: absolute;
+	margin: auto;
+	background-color: yellow;
+	width: 20px;
+	height: 20px;
 	top: 65%;
 	left: 50%;
 }
