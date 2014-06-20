@@ -1,6 +1,6 @@
 var checkPosition = function() {
-  var lowerLimit = 50;
-  var upperLimit = 1350;
+  var lowerLimit = gameWidth*.03;
+  var upperLimit = gameWidth*.94;
   if (player.x < lowerLimit) {
     player.x = upperLimit;
   }
