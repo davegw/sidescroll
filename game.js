@@ -37,3 +37,15 @@ var player = new Slider('player', 0.5*gameWidth);
 var taxi = new Slider('taxi', 0);
 
 taxi.slideUntil(300, 10);
+
+var makeThings = function(type, interval) {
+	setInterval(function() {
+		var taxi = new Slider(type, 0);
+		taxi.slideUntil(300, 10);
+	}, 6000);
+}
+makeThings('taxi');
+
+var taxiMerge = function(){
+	this.hide();
+}
