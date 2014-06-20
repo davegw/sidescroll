@@ -10,12 +10,18 @@
 #player {
 	position: absolute;
 	margin: auto;
-	background-image: url("../images/theplayer.gif");
 	background-size: 100% 100%;
-	width: 20px;
-	height: 20px;
+	width: 60px;
+	height: 60px;
 	top: 65%;
 	left: 50%;
 
 }
 
+.left {
+		background-image: url("../images/theplayer.gif");
+}
+
+.right {
+	background-image: url("../images/theplayer-right.gif");
+}
