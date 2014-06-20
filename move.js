@@ -1,17 +1,19 @@
 
 $('html').keydown(function(e){
   if (e.which === 38) {
-    //Up
+    //Up = Run left
+    player.slide(-30);
   }
   if (e.which === 40) {
-    //Down
+    //Down = Run right
+    player.slide(30);
   }    
   if (e.which === 37) {
-    //Left
+    //Left = Walk left
     player.slide(-10);
   }
   if (e.which === 39) {
-    //Right
+    //Right = Walk right
     player.slide(10);
   }
 });
