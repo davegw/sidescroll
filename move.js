@@ -1,3 +1,13 @@
+var checkPosition = function() {
+  var lowerLimit = 50;
+  var upperLimit = 1350;
+  if (player.x < lowerLimit) {
+    player.x = upperLimit;
+  }
+  if (player.x > upperLimit) {
+    player.x = lowerLimit;
+  }
+}
 
 $('html').keydown(function(e){
   if (e.which === 38) {
@@ -16,4 +26,7 @@ $('html').keydown(function(e){
     //Right = Walk right
     player.slide(10);
   }
+  checkPosition();
 });
+
+
